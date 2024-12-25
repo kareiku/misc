@@ -2,8 +2,6 @@
 ## Resources
 [![Static Badge](https://img.shields.io/badge/Minecraft%20configs-%23164A12)](https://github.com/kareiku/misc/tree/main/minecraft/config)
 <br>
-[![Static Badge](https://img.shields.io/badge/Minecraft%20custom%20datapacks-%2311104A)](https://github.com/kareiku/misc/tree/main/minecraft/datapacks)
-<br>
 [![Static Badge](https://img.shields.io/badge/Minecraft%20resource%20list-%23FCC705)](https://github.com/kareiku/misc/tree/main/minecraft/resources.md)
 <br>
 [![Static Badge](https://img.shields.io/badge/Terraria%20mod%20list-%2332A852)](https://github.com/kareiku/misc/tree/main/terraria/mods.md)

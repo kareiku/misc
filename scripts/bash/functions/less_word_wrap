@@ -1,3 +1,0 @@
-#!/bin/bash
-function less_word_wrap { fold -w 80 -s "$1" | less }
-# alias less='less_word_wrap'

@@ -1,9 +1,11 @@
 <details>
     <summary>Minecraft Mods</summary>
 
-    |t|a|b|l|e|
-    |-|-|-|-|-|
-    |v|a|l|u|e|
+    <br>
+
+    | t | a | b | l | e |
+    | - | - | - | - | - |
+    | v | a | l | u | e |
 
 </details>
 <details>

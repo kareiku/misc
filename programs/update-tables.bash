@@ -1,12 +1,9 @@
 #!/bin/bash
 
-if [ -z "$1" ]
-then
-    return
-fi
+if [ -z "$1" ] || [ -z "$2" ]; then exit; fi
 
 INPUT_FILE="$1"
-OUTPUT_FILE="tables.md"
+OUTPUT_FILE="$2"
 
 echo '# Tables' > $OUTPUT_FILE
 while IFS= read -r table

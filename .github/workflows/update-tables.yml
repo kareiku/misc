@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: sudo apt install -y jq && chmod +x ../scripts/update-tables.bash && ../scripts/update-tables.bash
+      - run: sudo apt install -y jq && chmod +x programs/update-tables.bash && programs/update-tables.bash
       - uses: actions/upload-artifact@v3
         with:
           path: tables.md

@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-tables:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: |
+        DATA=$(cat data.json)
+        echo "|Resource|For|Name|URL|\n|-|-|-|-|\n" > TABLES.md
+        echo "$DATA" | jq -r '' >> TABLES.md
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: TABLES.md
+          author_name: automated with GitHub Actions
+          author_email: none
+          message: "Updated data for TABLES.md from data.json"

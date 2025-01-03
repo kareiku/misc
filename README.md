@@ -1,5 +1,5 @@
 # Misc
-<a href="./TABLES.md">Mods' Tables</a>
+<a href="./tables.md">Games' Mods and Other Resources' Tables</a>
 ## External Resources
 <a href="https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes">Virtual Key Codes</a>
 <br>

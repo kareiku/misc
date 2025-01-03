@@ -1,6 +1,11 @@
 #!/bin/bash
 
-INPUT_FILE="../../data.json"
+if [ -z $1 ]
+then
+    return
+fi
+
+INPUT_FILE="$1"
 OUTPUT_FILE="tables.md"
 
 echo '# Tables' > $OUTPUT_FILE

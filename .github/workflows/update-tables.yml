@@ -15,7 +15,7 @@ jobs:
         echo "$DATA" | jq -r '' >> TABLES.md
       - uses: EndBug/add-and-commit@v9
         with:
-          add: TABLES.md
-          author_name: automated with GitHub Actions
-          author_email: none
+          add: "TABLES.md"
+          author_name: "automated with GitHub Actions"
+          author_email: "none"
           message: "Updated data for TABLES.md from data.json"

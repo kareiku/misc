@@ -13,8 +13,6 @@ jobs:
       - run: sudo apt install -y jq && chmod +x programs/update-tables.bash && programs/update-tables.bash data.json tables.md
       - uses: EndBug/add-and-commit@v9
         with:
-          author_name: "GitHub Actions"
-          author_email: "actions@github.com"
           message: "Updated tables.md"
           add: "tables.md"
           push: true

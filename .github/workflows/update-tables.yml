@@ -15,4 +15,3 @@ jobs:
         with:
           name: tables
           path: tables/
-          message: "Updated data for TABLES.md from data.json"

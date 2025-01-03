@@ -2,20 +2,17 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   update-tables:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - run: |
-        DATA=$(cat data.json)
-        echo "|Resource|For|Name|URL|\n|-|-|-|-|\n" > TABLES.md
-        echo "$DATA" | jq -r '' >> TABLES.md
-      - uses: EndBug/add-and-commit@v9
+      - run: sudo apt install -y jq && chmod +x ./tables/update-tables.bash && ./tables/update-tables.bash
+      - uses: actions/upload-artifact@v3
         with:
-          add: "TABLES.md"
-          author_name: "automated with GitHub Actions"
-          author_email: "none"
+          name: tables
+          path: tables/
           message: "Updated data for TABLES.md from data.json"

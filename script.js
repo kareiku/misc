@@ -23,13 +23,6 @@ function populateTable(data) {
 function filterTable() {
     const column = document.getElementById("selector").value;
     const query = document.getElementById("filter").value;
-    populateTable(query ? originalData.filter(record => selectColumn(column, record).toLowerCase().includes(query.toLowerCase())) : originalData);
+    populateTable(query ? originalData.filter(record => (record[column] || "").toLowerCase().includes(query.toLowerCase())) : originalData);
 }
 
-function selectColumn(column, record) {
-    return {
-        "type": record.type,
-        "for": record.for,
-        "name": record.name,
-    }[column] || "";
-}

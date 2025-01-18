@@ -34,7 +34,7 @@
 <br>
 <a href="https://github.com/practical-tutorials/project-based-learning">Project Based Learning</a>
 <br>
-<a href="https://github.com/codecrafters-io/build-your-own-x">Build your own &ltinsert-technology-here&gt</a>
+<a href="https://github.com/codecrafters-io/build-your-own-x">Build your own \<insert-technology-here\></a>
 <br>
 <a href="https://github.com/jwasham/coding-interview-university">Coding Interview University</a>
 <br>

@@ -1,4 +1,6 @@
 # Misc
+## Resources
+<a href="https://kareiku.github.io/misc">Table</a>
 ## External Resources
 <a href="https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes">Virtual Key Codes</a>
 <br>

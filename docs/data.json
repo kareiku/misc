@@ -376,5 +376,11 @@
         "for": "Minecraft",
         "name": "Trumpet Skeleton",
         "url": "https://www.curseforge.com/minecraft/mc-mods/doot"
+    },
+    {
+        "type": "Mod",
+        "for": "Minecraft",
+        "name": "Tom's Simple Storage Mod"
+        "url": "https://www.curseforge.com/minecraft/mc-mods/toms-storage"
     }
 ]

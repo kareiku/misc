@@ -1,5 +1,7 @@
 # Misc
+
 ## External Resources
+
 <a href="https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes">Virtual Key Codes</a>
 <br>
 <a href="https://crafting.thedestruc7i0n.ca/">TheDestruc7i0n Custom Crafter</a>

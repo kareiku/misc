@@ -4,27 +4,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kare's Miscellaneous</title>
-    <link rel="icon" href="./icon.ico">
+    <title>Miscellaneous</title>
+    <link rel="icon" href="icon.ico">
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
-
 <body>
+<h1 class="title">Miscellaneous</h1>
 <label for="selector"></label>
 <select id="selector">
     <option value="name">Name</option>
     <option value="type">Type</option>
     <option value="for">Game</option>
 </select>
-<label for="filter"></label><input type="search" id="filter" oninput="filterTable()" placeholder="Filter by name..." autofocus>
-<table id="results">
-    <tr>
-        <th>Type</th>
-        <th>Game</th>
-        <th>Name</th>
-        <th>URL</th>
-    </tr>
-</table>
+<label for="search-bar"></label>
+<input id="search-bar" type="search" placeholder="Filter by name...">
+<table id="results"></table>
 <script src="script.js"></script>
 </body>
 </html>

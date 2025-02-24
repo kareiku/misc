@@ -2,46 +2,25 @@
 
 ## External Resources
 
-<a href="https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes">Virtual Key Codes</a>
-<br>
-<a href="https://crafting.thedestruc7i0n.ca/">TheDestruc7i0n Custom Crafter</a>
-<br>
-<a href="https://cemu.cfw.guide/">Cemu Guide</a>
-<br>
-<a href="https://cse.google.com/cse?cx=4416977100c5544ee">Google Sorted Search</a>
-<br>
-<a href="https://github.com/FailedShack/USBHelperInstaller/releases">USB Helper Installer</a>
-<br>
-<a href="https://musicmap.info">MusicMap</a>
-<br>
-<a href="https://sheetsresume.com/resume-template">"Sheets" Resume Template</a>
-<br>
-<a href="https://devdocs.io/">DevDocs</a>
-<br>
-<a href="https://en.cppreference.com/w/c">C Reference</a>
-<br>
-<a href="https://en.cppreference.com/w">CPP Reference</a>
-<br>
-<a href="https://man.cx">manpages</a>
-<br>
-<a href="https://gnu.org/s/bash/manual/html_node">GNU Bash Reference Manual</a>
-<br>
-<a href="https://eloquentjavascript.net">Eloquent JavaScript - Online Book</a>
-<br>
-<a href="https://doc.rust-lang.org/book/foreword.html">The Rust Programming Language</a>
-<br>
-<a href="https://youtu.be/aVXZakaeuFo">Marvellous 60s video explaining pointers in C</a>
-<br>
-<a href="https://roadmap.sh/">Developer Roadmaps</a>
-<br>
-<a href="https://github.com/practical-tutorials/project-based-learning">Project Based Learning</a>
-<br>
-<a href="https://github.com/codecrafters-io/build-your-own-x">Build your own \<insert-technology-here\></a>
-<br>
-<a href="https://github.com/jwasham/coding-interview-university">Coding Interview University</a>
-<br>
-<a href="https://sci-hub.se/">sci-hub</a>
-<br>
-<a href="https://libgen.onl/">Libgen - Library Genesis</a>
-<br>
-<a href="https://annas-archive.org/">Anna's Archive</a>
+- [Virtual Key Codes](https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes)
+- [TheDestruc7i0n Custom Crafter](https://crafting.thedestruc7i0n.ca/)
+- [Cemu Guide](https://cemu.cfw.guide/)
+- [Google Sorted Search](https://cse.google.com/cse?cx=4416977100c5544ee)
+- [USB Helper Installer](https://github.com/FailedShack/USBHelperInstaller/releases)
+- [MusicMap](https://musicmap.info)
+- ["Sheets" Resume Template](https://sheetsresume.com/resume-template)
+- [DevDocs](https://devdocs.io/)
+- [C Reference](https://en.cppreference.com/w/c)
+- [CPP Reference](https://en.cppreference.com/w)
+- [manpages](https://man.cx)
+- [GNU Bash Reference Manual](https://gnu.org/s/bash/manual/html_node)
+- [Eloquent JavaScript - Online Book](https://eloquentjavascript.net)
+- [The Rust Programming Language](https://doc.rust-lang.org/book/foreword.html)
+- [Marvellous 60s video explaining pointers in C](https://youtu.be/aVXZakaeuFo)
+- [Developer Roadmaps](https://roadmap.sh/)
+- [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+- [Build your own <insert-technology-here>](https://github.com/codecrafters-io/build-your-own-x)
+- [Coding Interview University](https://github.com/jwasham/coding-interview-university)
+- [sci-hub](https://sci-hub.se/)
+- [Libgen - Library Genesis](https://libgen.onl/)
+- [Anna's Archive](https://annas-archive.org/)

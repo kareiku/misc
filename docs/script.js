@@ -9,11 +9,15 @@ window.addEventListener("load", () => {
         .then(response => response.json())
         .then(data => entries = data)
         .then(() => loadTable())
-        .then(() => input.focus())
         .catch(error => console.error(error));
+    input.value = "";
+    input.focus();
 });
 
-field.addEventListener("mousedown", () => input.focus());
+field.addEventListener("mousedown", () => {
+    input.value = "";
+    input.focus();
+});
 input.addEventListener("keyup", () => loadTable());
 
 function loadTable() {

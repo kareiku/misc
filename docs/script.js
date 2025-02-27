@@ -35,6 +35,15 @@ function loadTable() {
 
     filteredData.forEach(datum => {
         const row = table.insertRow();
-        keys.forEach(key => row.insertCell().innerHTML = datum[key]);
+        keys.forEach(key => row.insertCell().innerHTML = isUrl(datum[key]) ? `<a href="${datum[key]}">${datum[key]}</a>` : datum[key]);
     });
+}
+
+function isUrl(str) {
+    try {
+        new URL(str);
+        return true;
+    } catch (_) {
+        return false;
+    }
 }

@@ -1,0 +1,35 @@
+- [ERDPlus](https://erdplus.com/standalone), a WYSIWYG, web-based ER diagram designer.
+- [Kaggle](https://www.kaggle.com/), for free dataset dowloads, to be used as databases or in AI training.
+- [freeCodeCamp](https://www.freecodecamp.org/), for problem-solving and improving.
+- [HackerRank](https://www.hackerrank.com/), for problem-solving and improving.
+- [LeetCode](https://leetcode.com/), for problem-solving and improving.
+- [PlantUML](https://plantuml.com/), for UML designing.
+- [MySQL 8.0 Docs](https://dev.mysql.com/doc/refman/8.0/en/), official documentation for MySQL 8.0.
+- [Java Platform SE 17](https://docs.oracle.com/javase/17/docs/api/), official Oracle documentation for JDK 17.
+- [jq](https://jqlang.github.io/jq/), a query language for JSON files.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/), official Mozilla docs for web development.
+- [Hugging Face](https://huggingface.co/), for AI training and development with APIs.
+- [Virtual Key Codes](https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes), for development that requires specific keyboard inputs.
+- [TheDestruc7i0n Custom Crafter](https://crafting.thedestruc7i0n.ca/), for Minecraft custom crafting datapack development.
+- [Cemu Guide](https://cemu.cfw.guide/), for [Cemu](https://github.com/cemu-project/Cemu) (the Wii U emulator) setup.
+- [Google Time-Sorted Search](https://cse.google.com/cse?cx=4416977100c5544ee), to search in Google, sorted by last upload.
+- [USB Helper Installer](https://github.com/FailedShack/USBHelperInstaller/releases), for game downloading in emulation.
+- [MusicMap](https://musicmap.info), a visual map relating musical genres and periods.
+- ["Sheets" Resume Template](https://sheetsresume.com/resume-template), **the** CV template.
+- [DevDocs](https://devdocs.io/), freeCodeCamp's developed docs page for multiple languages. [Source in GitHub](https://github.com/freeCodeCamp/devdocs).
+- [C Reference](https://en.cppreference.com/w/c), C reference docs.
+- [C++ Reference](https://en.cppreference.com/w), C++ reference docs.
+- [Manpages](https://man.cx), Unix's Manpages online.
+- [GNU Bash Reference Manual](https://gnu.org/s/bash/manual/html_node), Bash's manual online, by GNU.
+- [Eloquent JavaScript](https://eloquentjavascript.net), a JavaScript online book.
+- [The Rust Programming Language](https://doc.rust-lang.org/book/foreword.html), official Rust docs.
+- [Learn C POINTERS in 60 Seconds](https://youtu.be/aVXZakaeuFo), possibly the best time-quality C* explanation out there.
+- [Developer Roadmaps](https://roadmap.sh/), community-created roadmaps and guides to help developers in picking up a learning path.
+- [Project Based Learning](https://github.com/practical-tutorials/project-based-learning), to learn by making projects yourself.
+- [Build your own \<insert-technology-here\>](https://github.com/codecrafters-io/build-your-own-x), to learn by making projects yourself, too.
+- [Coding Interview University](https://github.com/jwasham/coding-interview-university), resources that prove to be useful for first coding interviews.
+- [Sci-Hub](https://sci-hub.se/), free access to academic journals.
+- [Library Genesis](https://libgen.onl/), an increasing collection of science books, open to the people.
+- [Anna's Archive](https://annas-archive.org/), "the largest truly open library in human history".
+- [El Quijote en texto plano](https://gist.githubusercontent.com/jsdario/6d6c69398cb0c73111e49f1218960f79/raw/8d4fc4548d437e2a7203a5aeeace5477f598827d/el_quijote.txt), for Spanish NLP processing. Or just reading, if you're crazy enough.
+- [ASCII Table](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/USASCII_code_chart.svg/1280px-USASCII_code_chart.svg.png), does it really need an explanation?

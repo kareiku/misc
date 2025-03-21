@@ -60,6 +60,12 @@
     ```bash
     while IFS= read -r line; do yt-dlp "ytsearch:$line" -x; done < ./songs.txt
     ```
-    * What this does: Reads each line and executes a search on YouTube by using the yt-dlp utility, which will later take the first result and download its audio (-x option) into the current directory.
+    * What this does: Reads each line and executes a search on YouTube by using the yt-dlp utility, which will take the first result and download its audio (-x option) into the current directory.
     * Note: This assumes a global installation of yt-dlp. You might need to change some parts to adapt to your environment.
 
+6. (Optional) In case you want to get the list of URLs, run the following statement:
+   ```bash
+   while IFS= read -r line; do yt-dlp "ytsearch:$line" -j | jq '.original_url'; done < ./songs.txt > ./urls.txt
+   ```
+   * What this does: Reads each line and executes a search on YouTube by using the yt-dlp utility, which will take the first result and extract the video URL by using the jq JSON parser, and writting it into the output file.
+   * Note: This might be useful to avoid excessively large downloads from huge playlists.

@@ -1,4 +1,4 @@
-# Steps for downloading the songs from a certain website
+# Steps for downloading a playlist from a certain website
 
 1. Access the website HTML page with the playlist.
 
@@ -10,7 +10,7 @@
         ```js
         const mySongsSet = new Set();
         const myClassName = ''; // This contains the class name to get the elements. It can be found by using the DevTools' Inspector.
-        const myIntervalDuration = 1500; // This can be changed, but 1500ms is safe and does the job correctly.
+        const myIntervalDuration = 1500; // This can be changed, but 1500ms is safe against rate-limiting and does the job correctly.
         ```
     2. Define the following function:
         ```js
@@ -45,7 +45,7 @@
 
 3. Once exported into your machine, navigate to where the file is located.
 
-4. Open Node and run the following statements:
+4. Open Node.js and run the following statements:
     ```js
     const fs = await import('fs');
     const myFile = fs.readFileSync('./playlist.json');
@@ -61,11 +61,32 @@
     while IFS= read -r line; do yt-dlp "ytsearch:$line" -x; done < ./songs.txt
     ```
     * What this does: Reads each line and executes a search on YouTube by using the yt-dlp utility, which will take the first result and download its audio (-x option) into the current directory.
-    * Note: This assumes a global installation of yt-dlp. You might need to change some parts to adapt to your environment.
+    * Note: This assumes a global installation of yt-dlp. You might need to adapt the statement to your environment.
 
-6. (Optional) In case you want to get the list of URLs, run the following statement:
-   ```bash
-   while IFS= read -r line; do yt-dlp "ytsearch:$line" -j | jq '.original_url'; done < ./songs.txt > ./urls.txt
-   ```
-   * What this does: Reads each line and executes a search on YouTube by using the yt-dlp utility, which will take the first result and extract the video URL by using the jq JSON parser, and writting it into the output file.
-   * Note: This might be useful to avoid excessively large downloads from huge playlists.
+6. (Optional) Storing the URL list into a file:
+    ```bash
+    while IFS= read -r line; do yt-dlp "ytsearch:$line" -j | jq '.original_url'; done < ./songs.txt > ./urls.txt
+    ```
+    * What this does: Reads each line and executes a search on YouTube by using the yt-dlp utility, which will take the first result and extract the video URL by using the jq JSON parser, and writting it into the output file.
+    * Note: This might be useful to avoid excessively large downloads from huge playlists.
+
+7. (Optional) Converting a URL list from a file into temporal YouTube playlists with their own URL:
+    1. Get the IDs from the URLs, for example, with sed:
+        ```bash
+        sed -e 's/https:\/\/youtube\.com\/watch?v=//g' ./urls.txt -i
+        ```
+    2. Iterate over all of the IDs and divide them into groups of maximum 50 (what YouTube quick playlists allow), for example, with Node.js:
+        ```js
+        const fs = await import('fs');
+        const myFile = fs.readFileSync('./urls.txt');
+        const myIds = myFile.toString().split(/\r?\n/);
+        let i = 1;
+        while (myIds.length > 50) {
+            const a = myIds.splice(0, 50);
+            fs.writeFileSync(`./playlist_part_$(i).txt`, `https://www.youtube.com/watch_videos?video_ids=${a.join(',')}`);
+            i++;
+        }
+        if (myIds.length > 0) {
+            fs.writeFileSync(`./playlist_part_$(i).txt`, `https://www.youtube.com/watch_videos?video_ids=${myIds.join(',')}`);
+        }
+        ```

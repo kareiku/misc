@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.kareiku</groupId>
+    <artifactId>DBM4J</artifactId>
+    <version>1.0.0</version>
+
+    <name>DBM4J</name>
+    <url>https://github.com/kareiku/misc/tree/main/DBM4J</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.iluwatar.urm</groupId>
+                <artifactId>urm-maven-plugin</artifactId>
+                <version>1.4.8</version>
+                <configuration>
+                    <outputDirectory>${project.basedir}/target</outputDirectory>
+                    <packages>
+                        <param>io.github.kareiku</param>
+                    </packages>
+                    <ignores/>
+                    <includeMainDirectory>true</includeMainDirectory>
+                    <includeTestDirectory>false</includeTestDirectory>
+                    <presenter>plantuml</presenter>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>map</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

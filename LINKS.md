@@ -34,4 +34,6 @@
 |[Library Genesis](https://libgen.onl/)|An increasing collection of science books, open to the people.|
 |[Anna's Archive](https://annas-archive.org/)|"The largest truly open library in human history".|
 |[El Quijote en texto plano](https://gist.githubusercontent.com/jsdario/6d6c69398cb0c73111e49f1218960f79/raw/8d4fc4548d437e2a7203a5aeeace5477f598827d/el_quijote.txt)|First part of "El Quijote" in plain text. Useful for simple Spanish NLP processing. Or just reading, if you're crazy enough.|
-|[ASCII Table](https://upload.wikimedia.org/wikipedia/commons/1/1b/ASCII-Table-wide.svg)||
+|[ASCII Table](https://upload.wikimedia.org/wikipedia/commons/1/1b/ASCII-Table-wide.svg)|One of Wikipedia's ASCII tables, in SVG.|
+|[APOD](https://apod.nasa.gov/)|NASA's Astronomy Picture of the Day.|
+|[SpreadTheSign](https://www.spreadthesign.com/)|Dictionary with multiple oral-sign translations and vice versa.|

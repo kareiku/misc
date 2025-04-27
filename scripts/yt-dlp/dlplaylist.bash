@@ -6,6 +6,6 @@ then
 else
     for url in $@
     do
-        yt-dlp -q --progress --no-warnings -x $url -o './$(artist)s/%(playlist)s/%(playlist_index)s-%(title)s.%(ext)s'
+        yt-dlp -q --progress --no-warnings -x $url -o './%(artist)s/%(playlist)s/%(playlist_index)s-%(title)s.%(ext)s'
     done
 fi

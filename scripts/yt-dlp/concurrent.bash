@@ -15,7 +15,7 @@ while [[ $# > 0 ]]
 do
     for ((i = 0; i < M && $# > 0; i++))
     do
-        yt-dlp -x $1 -o './%(channel)s/%(playlist)s/%(playlist_index)s-%(title)s.%(ext)s'
+        yt-dlp -x $1 -o './%(playlist)s/%(playlist_index)s-%(title)s.%(ext)s'
         shift
     done
     wait

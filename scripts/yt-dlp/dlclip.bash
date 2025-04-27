@@ -1,6 +1,9 @@
 #!/bin/bash
 
-if [ -z $1 ] || [ -z $2 ] || [ -z $3 ]
-then echo "Usage: $0 STARTTIME ENDTIME URL\nTime format: \"hh:mm:ss.s\"\n"
-else yt-dlp --downloader ffmpeg --downloader-args "ffmpeg_i:-ss $1 -to $2" $3
+if [[ -z $1 || -z $2 || -z $3 ]]
+then
+    echo "Usage: $0 START_TIME END_TIME URL"
+    echo "Time format: \"HH:mm:ss.s\""
+else
+    yt-dlp --downloader ffmpeg --downloader-args "ffmpeg_i:-ss $1 -to $2" $3
 fi

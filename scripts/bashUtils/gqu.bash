@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if command git rev-parse --is-inside-work-tree > /dev/null 2>&1
+if ! command git rev-parse --is-inside-work-tree > /dev/null 2>&1
 then
     echo ".git directory not found."
     exit 1

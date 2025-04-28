@@ -1,22 +1,31 @@
 #!/bin/bash
 
-################# IMPORTANT NOTE #################
-#                                                #
-# If inputting a file with space-separated urls, #
-# run the script in the following way:           #
-#                                                #
-#      xargs concurrent.bash < urls.txt          #
-#                                                #
-##################################################
+err=0
+for cmd in "xargs" "yt-dlp"
+do
+    err=$((err + 1))
+    if ! command -v "$cmd" &> /dev/null
+    then
+        echo "$cmd is not installed in this system."
+        exit $err
+    fi
+done
+
+err=$((err + 1))
+if [[ -z $1 ]]
+then
+    echo "Usage: $0 <file> | <url> [url...]"
+    exit $err
+fi
 
 M=3
+run_xargs() {
+    xargs -d '\n' -P "$M" -I {} yt-dlp -x -o './%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "{}"
+}
 
-while [[ $# > 0 ]]
-do
-    for ((i = 0; i < M && $# > 0; i++))
-    do
-        yt-dlp -x "$1" -o './%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' &
-        shift
-    done
-    wait
-done
+if [[ -f "$1" ]]
+then
+    run_xargs < "$1"
+else
+    printf '%s\n' "$@" | run_xargs
+fi

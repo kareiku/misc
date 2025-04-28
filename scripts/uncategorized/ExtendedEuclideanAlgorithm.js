@@ -1,15 +1,15 @@
-export function EEA(a, b) {
+export default function (a, b) {
     const x = (x2, x1, q1) => x2 - x1 * q1;
-    const q = (r2, r1) => r1 === 0 ? null : Math.floor(r2 / r1);
+    const q = (r2, r1) => (r1 === 0 ? null : Math.floor(r2 / r1));
 
     const table = {
         r: [a, b],
         q: [null, q(a, b)],
         x: [1, 0],
-        y: [0, 1]
+        y: [0, 1],
     };
 
-    while(table.r.at(-1) !== 0) {
+    while (table.r.at(-1) !== 0) {
         const r2 = table.r.at(-2);
         const r1 = table.r.at(-1);
         const q1 = q(r2, r1);
@@ -21,8 +21,4 @@ export function EEA(a, b) {
     }
 
     return table;
-}
-
-export function printEEA(a, b) {
-    console.table(EEA(a, b));
 }

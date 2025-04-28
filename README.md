@@ -1,3 +1,3 @@
 # Miscellaneous
 
-A collection of small projects, scripts, notes, and guides that I like to keep accessible—for myself and anyone who finds them useful.
+A collection of small projects and scripts I keep handy—for myself and anyone who might find them useful.

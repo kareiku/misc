@@ -7,15 +7,15 @@ do
     if ! command -v "$cmd" &> /dev/null
     then
         echo "$cmd is not installed in this system."
-        exit $err
+        exit "$err"
     fi
 done
 
 err=$((err + 1))
-if [[ -z $1 ]]
+if [[ -z "$1" ]]
 then
     echo "Usage: $0 <file> | <url> [url...]"
-    exit $err
+    exit "$err"
 fi
 
 M=3

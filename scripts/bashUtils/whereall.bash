@@ -4,7 +4,7 @@ zshInstalled=$(command -v zsh >/dev/null 2>&1)
 
 if [[ -z $1 ]]
 then
-    echo "Usage: $0 SCRIPT [SCRIPT...]"
+    echo "Usage: $0 <file> [file...]"
 else
     for script in $@
     do

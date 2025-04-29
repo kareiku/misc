@@ -15,6 +15,6 @@ public class SQLiteDBM extends DBM {
 
     @Override
     protected Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(JDBC_SQLITE + Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource(dbName)).getPath());
+        return DriverManager.getConnection(JDBC_SQLITE + Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource(this.dbName)).getPath());
     }
 }

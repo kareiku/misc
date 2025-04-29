@@ -13,6 +13,6 @@ public class MySQLDBM extends DBM {
 
     @Override
     protected Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(url);
+        return DriverManager.getConnection(this.url);
     }
 }

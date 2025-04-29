@@ -1,7 +1,7 @@
 #!/bin/bash
 
 START_EPOCH="$(date +%s)"
-FORMAT="./yt-dlp_$START_EPOCH/%(playlist)s/%(playlist_index)s-%(title)s.%(ext)s"
+FORMAT="./yt-dlp_$START_EPOCH/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s"
 CONCURRENT_PROCESS_COUNT=5
 ERROR_FILE="./yt-dlp_$START_EPOCH/error.log"
 

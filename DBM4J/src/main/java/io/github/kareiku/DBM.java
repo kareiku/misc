@@ -1,5 +1,7 @@
 package io.github.kareiku;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,10 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class DBM implements IDBM {
-    protected abstract Connection getConnection() throws SQLException;
+    protected abstract @NotNull Connection getConnection() throws SQLException;
 
     @Override
-    public void update(String query) throws SQLException {
+    public void update(@NotNull String query) throws SQLException {
         try (
                 Connection connection = this.getConnection();
                 Statement statement = connection.createStatement()
@@ -21,7 +23,7 @@ public abstract class DBM implements IDBM {
     }
 
     @Override
-    public List<List<?>> fetch(String query) throws SQLException {
+    public @NotNull List<List<?>> fetch(@NotNull String query) throws SQLException {
         List<List<?>> table = new ArrayList<>();
         try (
                 Connection connection = this.getConnection();

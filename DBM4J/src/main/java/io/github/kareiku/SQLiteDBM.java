@@ -1,5 +1,7 @@
 package io.github.kareiku;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -14,7 +16,7 @@ public class SQLiteDBM extends DBM {
     }
 
     @Override
-    protected Connection getConnection() throws SQLException {
+    protected @NotNull Connection getConnection() throws SQLException {
         return DriverManager.getConnection(JDBC_SQLITE + Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource(this.dbName)).getPath());
     }
 }

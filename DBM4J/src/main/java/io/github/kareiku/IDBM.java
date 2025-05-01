@@ -1,10 +1,12 @@
 package io.github.kareiku;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.sql.SQLException;
 import java.util.List;
 
 public interface IDBM {
-    void update(String query) throws SQLException;
+    void update(@NotNull String query) throws SQLException;
 
-    List<List<?>> fetch(String query) throws SQLException;
+    @NotNull List<List<?>> fetch(@NotNull String query) throws SQLException;
 }

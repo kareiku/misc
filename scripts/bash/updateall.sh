@@ -2,7 +2,7 @@
 
 start_time=$(date +%s)
 
-apt update && apt full-upgrade && apt autoremove && apt autoclean &
+apt update -y && apt full-upgrade -y && apt autoremove -y && apt autoclean -y &
 snap refresh &
 wait
 

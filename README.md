@@ -16,7 +16,7 @@ A collection of small projects and scripts I keep handy—for myself and anyone 
 ## Usage
 
 - Scripts are organized in directories named after the programming language they're written in.
-- Precompiled versions of libraries and applications can be found on the [Releases](#) page.
+- Precompiled versions of libraries and applications are available in their respective `target/` directories.
 
 ## Build It Yourself
 

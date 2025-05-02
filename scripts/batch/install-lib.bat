@@ -6,7 +6,7 @@ if "%~4"=="" (
     exit /b 1
 )
 
-set "file"=%~1
+set "file=%~1"
 set "groupId=%~2"
 set "artifactId=%~3"
 set "version=%~4"

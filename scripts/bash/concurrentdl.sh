@@ -23,7 +23,7 @@ done
 start_download() {
     mkdir -p "$(dirname "$ERROR_FILE")"
     xargs -d '\n' -P "$CONCURRENT_PROCESS_COUNT" -I {} \
-        yt-dlp -x -o "$FORMAT" "{}" 2>> "$ERROR_FILE"
+        yt-dlp -x -o "$FORMAT" -- "{}" 2>> "$ERROR_FILE"
 }
 
 if [[ -f "$1" ]]

@@ -34,7 +34,31 @@ Note: The default `<remote_name>` is usually `origin`.
 
 ## Cherry-picking
 
+The following sequence of commands allow for cherry-picking (copying) some commits in a branch and into another.
+
+1. `git checkout <dest>`
+2. `git log <src>`
+3. `git cherry-pick <sha> [sha...]`
+4. `git cherry-pick --continue`
+5. `git push <remote_name> <dest>`
+
 ## Rebasing
+
+Rebasing is the _art_ of organizing your past commits by changing their messages, deleting them, or merging them with others.
+The following can be used to rebase commits:
+
+1. `git rebase -i  <sha | HEAD~N | --root>`
+    - Where `-i` means interactive,
+    - "sha" is the hash of the lower bound commit you want to start with,
+    - "N" is the number of commits behind HEAD you want to start with,
+    - and `--root` is the initial commit of the repository.
+2. By using the interactive rebase editor:
+    - `p` or `pick` means "use commit, as-is";
+    - `r` or `reword` means "use commit, but edit the commit message";
+    - `s` or `squash` means "use commit, but meld it into the previous one";
+    - `f` or `fixup` means the same as `squash`, but discarding this commit's message;
+    - `d` or `drop` means "remove this commit".
+3. `git push --force`
 
 ## File Ignoring (using .gitignore)
 

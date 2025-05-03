@@ -28,6 +28,13 @@ public class Diagramizer {
 
         sb.append("    ---\n");
 
+        Arrays.stream(clazz.getDeclaredConstructors()).filter(constructor -> !constructor.isSynthetic()).forEach(constructor -> sb
+                .append("    ")
+                .append(getModifierSymbol(constructor.getModifiers()))
+                .append(constructor.getName())
+                .append("\n")
+        );
+
         Arrays.stream(clazz.getDeclaredMethods()).filter(method -> !method.isSynthetic()).forEach(method -> {
             sb.append("    ")
                     .append(getModifierSymbol(method.getModifiers()))

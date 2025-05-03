@@ -24,7 +24,7 @@ Covering concepts of UML and PlantUML in a simple way.
 
 - Inner Classes (in-code implementation)
     - In PlantUML: `A +-- B`
-    - Definition: B is an inner class of A.
+    - Definition: B's class is defined inside of A's class rather than in its own file.
 
 - Inheritance (extension)
     - In PlantUML `A <|-- B`

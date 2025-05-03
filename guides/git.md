@@ -63,7 +63,7 @@ They're mainly used to enforce one kind of line ending when uploading to the rep
 
 ### Enforcing LF/CRLF
 
-The correct way to enforce LF on certain files or kinds of files is with the following format:
+The correct way to enforce a line ending on certain files or kinds of files is with the following format:
 
 ```
 *.ext1  text eol=lf

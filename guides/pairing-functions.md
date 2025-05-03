@@ -5,7 +5,7 @@ A pairing function is a function that encodes two natural numbers into one natur
 ## Formal Definition
 
 ```
-f: ℕ × ℕ → ℕ
+𝑓: ℕ × ℕ → ℕ
 ```
 
 ## Properties

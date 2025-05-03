@@ -41,23 +41,32 @@ public class Diagramizer {
         else return '~';
     }
 
+    private static @NotNull String getStaticOrAbstract(int modifiers) {
+        if (Modifier.isStatic(modifiers)) return "{static}";
+        else if (Modifier.isAbstract(modifiers)) return "{abstract}";
+        else return "";
+    }
+
     private static @NotNull String formatField(@NotNull Field field) {
-        return String.format("    %c%s: %s\n",
+        return String.format("    %c%s%s: %s\n",
                 getModifierSymbol(field.getModifiers()),
+                getStaticOrAbstract(field.getModifiers()),
                 field.getName(),
                 field.getType().getSimpleName());
     }
 
     private static @NotNull String formatConstructor(@NotNull Constructor<?> constructor) {
-        return String.format("    %c%s(%s)\n",
+        return String.format("    %c%s%s(%s)\n",
                 getModifierSymbol(constructor.getModifiers()),
+                getStaticOrAbstract(constructor.getModifiers()),
                 constructor.getName(),
                 formatParameters(constructor));
     }
 
     private static @NotNull String formatMethod(@NotNull Method method) {
-        return String.format("    %c%s(%s): %s\n",
+        return String.format("    %c%s%s(%s): %s\n",
                 getModifierSymbol(method.getModifiers()),
+                getStaticOrAbstract(method.getModifiers()),
                 method.getName(),
                 formatParameters(method),
                 method.getReturnType().getSimpleName());

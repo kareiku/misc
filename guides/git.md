@@ -34,7 +34,7 @@ Note: The default `<remote_name>` is usually `origin`.
 
 ## Cherry-picking
 
-The following sequence of commands allow for cherry-picking (copying) some commits in a branch and into another.
+The following sequence of commands allow for cherry-picking (copying) some commits from a branch into another (not removing them from the source branch).
 
 1. `git checkout <dest>`
 2. `git log <src>`

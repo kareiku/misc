@@ -7,6 +7,7 @@ A collection of small projects, guides and scripts I keep handy—for myself and
 - Various scripts for a wide range of purposes
 - **DBM4J**: A lightweight set of Java classes and interfaces for easy database access. Designed for simple queries, yet fully extensible.
 - **LM4J**: Simplifying natural language handling in Java. These classes make it easy to read lang-like (plain text) files and return results safely using utilities like `Optional`.
+- **Diagramizer4J**: A tool that takes a Java class and formats it into a certain PlantUML class diagram representation (the most alike to standard UML one).
 
 ## Features
 

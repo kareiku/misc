@@ -8,7 +8,23 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Diagramizer {
-    public static @NotNull String diagramize(@NotNull Class<?> clazz, @Nullable String stereotype, @Nullable String alias) {
+    private static Diagramizer instance;
+
+    private Diagramizer() {
+    }
+
+    public static synchronized Diagramizer getInstance() {
+        if (instance == null) {
+            instance = new Diagramizer();
+        }
+        return instance;
+    }
+
+    public @NotNull String diagramize(@NotNull Class<?> clazz) {
+        return this.diagramize(clazz, null, null);
+    }
+
+    public @NotNull String diagramize(@NotNull Class<?> clazz, @Nullable String stereotype, @Nullable String alias) {
         StringBuilder sb = new StringBuilder();
 
         stereotype = Objects.isNull(stereotype) ? "" : String.format("<<%s>>\\n", stereotype);
@@ -18,61 +34,61 @@ public class Diagramizer {
 
         Arrays.stream(clazz.getDeclaredFields())
                 .filter((field) -> !field.isSynthetic())
-                .forEach((field) -> sb.append(formatField(field)));
+                .forEach((field) -> sb.append(this.formatField(field)));
         sb.append("    ---\n");
 
         Arrays.stream(clazz.getDeclaredConstructors())
                 .filter((constructor) -> !constructor.isSynthetic())
-                .forEach((constructor) -> sb.append(formatConstructor(constructor)));
+                .forEach((constructor) -> sb.append(this.formatConstructor(constructor)));
 
         Arrays.stream(clazz.getDeclaredMethods())
                 .filter((method) -> !method.isSynthetic())
-                .forEach((method) -> sb.append(formatMethod(method)));
+                .forEach((method) -> sb.append(this.formatMethod(method)));
 
         sb.append("}");
 
         return sb.toString();
     }
 
-    private static char getModifierSymbol(int modifiers) {
+    private char getModifierSymbol(int modifiers) {
         if (Modifier.isPublic(modifiers)) return '+';
         else if (Modifier.isProtected(modifiers)) return '#';
         else if (Modifier.isPrivate(modifiers)) return '-';
         else return '~';
     }
 
-    private static @NotNull String getStaticOrAbstract(int modifiers) {
+    private @NotNull String getStaticOrAbstract(int modifiers) {
         if (Modifier.isStatic(modifiers)) return "{static}";
         else if (Modifier.isAbstract(modifiers)) return "{abstract}";
         else return "";
     }
 
-    private static @NotNull String formatField(@NotNull Field field) {
+    private @NotNull String formatField(@NotNull Field field) {
         return String.format("    %c%s%s: %s\n",
-                getModifierSymbol(field.getModifiers()),
-                getStaticOrAbstract(field.getModifiers()),
+                this.getModifierSymbol(field.getModifiers()),
+                this.getStaticOrAbstract(field.getModifiers()),
                 field.getName(),
                 field.getType().getSimpleName());
     }
 
-    private static @NotNull String formatConstructor(@NotNull Constructor<?> constructor) {
+    private @NotNull String formatConstructor(@NotNull Constructor<?> constructor) {
         return String.format("    %c%s%s(%s)\n",
-                getModifierSymbol(constructor.getModifiers()),
-                getStaticOrAbstract(constructor.getModifiers()),
+                this.getModifierSymbol(constructor.getModifiers()),
+                this.getStaticOrAbstract(constructor.getModifiers()),
                 constructor.getName(),
-                formatParameters(constructor));
+                this.formatParameters(constructor));
     }
 
-    private static @NotNull String formatMethod(@NotNull Method method) {
+    private @NotNull String formatMethod(@NotNull Method method) {
         return String.format("    %c%s%s(%s): %s\n",
-                getModifierSymbol(method.getModifiers()),
-                getStaticOrAbstract(method.getModifiers()),
+                this.getModifierSymbol(method.getModifiers()),
+                this.getStaticOrAbstract(method.getModifiers()),
                 method.getName(),
-                formatParameters(method),
+                this.formatParameters(method),
                 method.getReturnType().getSimpleName());
     }
 
-    private static @NotNull String formatParameters(@NotNull Executable executable) {
+    private @NotNull String formatParameters(@NotNull Executable executable) {
         StringBuilder sb = new StringBuilder();
         Parameter[] params = executable.getParameters();
 

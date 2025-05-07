@@ -9,7 +9,7 @@ A collection of guides and scripts I keep handy—for myself and anyone who migh
 
 ## Usage
 
-- You can find the scripts in directories named after the programming language they're written in.
+You can find the scripts in directories named after the programming language they're written in.
 
 ## Contributing
 

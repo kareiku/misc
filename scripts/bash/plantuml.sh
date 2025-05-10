@@ -1,14 +1,32 @@
 #!/bin/bash
 
-if [[ -z "$1" ]]
-then
-    echo "Usage: $0 <file>"
+format="png"
+
+bad_usage_error() {
+    echo "Usage: $0 [-tformat] <file> [file...]"
+    echo "-t    Format (png, svg, pdf, etc.). Defaults to png."
     exit 1
-fi
+}
 
-if [[ ! -f ~/.plantuml.jar ]]
-then
-    wget -q -O ~/.plantuml.jar 'https://github.com/plantuml/plantuml/releases/download/v1.2025.2/plantuml-mit-1.2025.2.jar'
-fi
+[[ -z "$1" ]] && bad_usage_error
 
-java -jar ~/.plantuml.jar "$1"
+[[ ! -f ~/.plantuml.jar ]] && wget -q -O ~/.plantuml.jar 'https://github.com/plantuml/plantuml/releases/download/v1.2025.2/plantuml-mit-1.2025.2.jar'
+
+while getopts ":t:" opt
+do
+    case "${opt}" in
+        t )
+            format="$OPTARG"
+            ;;
+        \? )
+            echo "Invalid option: -$OPTARG" >&2
+            ;;
+        : )
+            echo "Option -$OPTARG requires an argument." >&2
+            bad_usage_error
+            ;;
+    esac
+done
+shift $((OPTIND - 1))
+
+java -jar ~/.plantuml.jar -t"$format" "$@"

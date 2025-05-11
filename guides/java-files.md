@@ -21,7 +21,7 @@ With the following statements, you can consider a good relative access, so long 
 
 ```java
 /* Lets say we want to reach a file someText.txt, found under a directory, dirA, found under the user's home directory
- * We can use the property user.home to find our root directory and append them with Paths
+ * We can use the property user.home to find our root directory and append the rest with Paths
  */
 
 String path = Paths.get(System.getProperty("user.home"), "dirA", "someText.txt").toString();

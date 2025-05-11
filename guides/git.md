@@ -1,5 +1,15 @@
 # Git
 
+## Updating from remote without losing changes
+
+```bash
+git stash
+git pull origin <branch_name>
+git stash pop
+```
+
+If there are conflicts, Git will allow for manual resolving.
+
 ## Branching
 
 ### Creating a branch

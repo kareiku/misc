@@ -4,7 +4,7 @@
 
 ```bash
 git stash
-git pull origin <branch_name>
+git pull origin <branch-name>
 git stash pop
 ```
 

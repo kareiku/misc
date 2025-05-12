@@ -70,6 +70,33 @@ The following can be used to rebase commits:
     - `d` or `drop` means "remove this commit".
 3. `git push --force`
 
+## Merging
+
+Merging is a process where two independent commits (in the same working tree but different branches) are melded into another commit.
+When finished, the branch from where the commit was started will point to the _merged_ commit.
+<br>
+Some commands used when merging are the following:
+
+```bash
+# From branch_name_1
+git merge <branch_name_2>
+
+git merge --abort
+
+git merge --help
+```
+
+See the [official documentation](https://git-scm.com/docs/git-merge) for more information, and [this official guide](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) for better understanding of what branch merging is.
+
+### "Merging" files from a branch into another
+
+If, for some reason, branches are disjoint and merging can't be correctly done, copying everything from a branch into another can be done with
+
+```bash
+git checkout <branch_name_1>
+git checkout <branch_name_2> -- .
+```
+
 ## File Ignoring (using .gitignore)
 
 Statements are read, line by line, from first to last.

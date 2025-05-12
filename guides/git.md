@@ -10,54 +10,60 @@ git stash pop
 
 If there are conflicts, Git will allow for manual resolving.
 
+## Downgrade a selection of files to a previous version
+
+```bash
+git checkout <commit-sha> -- path/to/file
+```
+
 ## Branching
 
 ### Creating a branch
 
 ```bash
-git branch <branch_name>
+git branch <branch>
 
 OR
 
-git checkout -b <branch_name>
+git checkout -b <branch>
 ```
 
 ### Changing between branches
 
 ```bash
-git checkout <branch_name>
+git checkout <branch>
 ```
 
 ### Deleting a branch from local
 
 ```bash
-git branch -d [-f] <branch_name>
+git branch -d [-f] <branch>
 ```
 
 ### Deleting a branch from remote
 
 ```bash
-git push -d <remote_name> <branch_name>
+git push -d <remote-name> <branch>
 ```
 
-Note: The default `<remote_name>` is usually `origin`.
+Note: The default `<remote-name>` is usually `origin`.
 
 ## Cherry-picking
 
 The following sequence of commands allow for cherry-picking (copying) some commits from a branch into another (not removing them from the source branch).
 
-1. `git checkout <dest>`
-2. `git log <src>`
-3. `git cherry-pick <sha> [sha...]`
+1. `git checkout <branch-dest>`
+2. `git log <branch-src>`
+3. `git cherry-pick <commit-sha> [commit-sha...]`
 4. `git cherry-pick --continue`
-5. `git push <remote_name> <dest>`
+5. `git push <remote-name> <branch-dest>`
 
 ## Rebasing
 
 Rebasing is the _art_ of organizing your past commits by changing their messages, deleting them, or merging them with others.
 The following can be used to rebase commits:
 
-1. `git rebase -i  <sha | HEAD~N | --root>`
+1. `git rebase -i  <commit-sha | HEAD~N | --root>`
     - Where `-i` means interactive,
     - "sha" is the hash of the lower bound commit you want to start with,
     - "N" is the number of commits behind HEAD you want to start with,
@@ -78,11 +84,9 @@ When finished, the branch from where the commit was started will point to the _m
 Some commands used when merging are the following:
 
 ```bash
-# From branch_name_1
-git merge <branch_name_2>
-
+git checkout <branch-1>
+git merge <branch-2>
 git merge --abort
-
 git merge --help
 ```
 
@@ -93,8 +97,8 @@ See the [official documentation](https://git-scm.com/docs/git-merge) for more in
 If, for some reason, branches are disjoint and merging can't be correctly done, copying everything from a branch into another can be done with
 
 ```bash
-git checkout <branch_name_1>
-git checkout <branch_name_2> -- .
+git checkout <branch-1>
+git checkout <branch-2> -- .
 ```
 
 ## File Ignoring (using .gitignore)

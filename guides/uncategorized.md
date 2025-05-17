@@ -17,3 +17,8 @@ find <dir> -type f [-not -path "*/.git/*"] | sed -n 's/.*\.\([^.\/]*\)$/\1/p' | 
 ```bash
 history | awk '{$1=""; sub(/^ /, ""); print}' | sort -u
 ```
+
+- Check the difference of two _cut_ files
+```bash
+diff -s <(cut ... file1) <(cut ... file2)
+```

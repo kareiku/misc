@@ -84,10 +84,12 @@ When finished, the branch from where the commit was started will point to the _m
 Some commands used when merging are the following:
 
 ```bash
-git checkout <branch-1>
+git checkout <branch-1> # To ensure we're merging other branches into branch-1
 git merge <branch-2>
 git merge --abort
 git merge --help
+git merge -X ours <branch-2> # Resolve conflicts with our branch's changes
+git merge -X theirs <branch-2> # Resolve conflicts with their branch's changes
 ```
 
 See the [official documentation](https://git-scm.com/docs/git-merge) for more information, and [this official guide](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) for better understanding of what branch merging is.

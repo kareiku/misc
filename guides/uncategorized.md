@@ -8,11 +8,6 @@
 
 ## Useful Unix One-liners
 
-- Find all used file extensions in a directory (includes the possibility of avoiding the `.git` directory)
-```bash
-find <dir> -type f [-not -path "*/.git/*"] | sed -n 's/.*\.\([^.\/]*\)$/\1/p' | sort -u
-```
-
 - Print all instances of different commands used (from history, sorted)
 ```bash
 history | awk '{$1=""; sub(/^ /, ""); print}' | sort -u
@@ -20,5 +15,5 @@ history | awk '{$1=""; sub(/^ /, ""); print}' | sort -u
 
 - Check the difference of two _cut_ files
 ```bash
-diff -s <(cut ... file1) <(cut ... file2)
+diff -s <(cut <options> file1) <(cut <options> file2)
 ```

@@ -1,12 +1,19 @@
 #!/bin/bash
 
-start_time=$(date +%s)
+(
+    apt update -y && \
+    apt full-upgrade -y && \
+    apt autoremove -y && \
+    apt autoclean -y
+) &
 
-apt update -y && apt full-upgrade -y && apt autoremove -y && apt autoclean -y &
 snap refresh &
+
 wait
 
-end_time=$(date +%s)
-elapsed_time=$((end_time - start_time))
-
-echo "Updating finished in $elapsed_time seconds."
+if [[ -f /var/run/reboot-required ]]; then
+    read -r -p "A reboot is required. Do you want to reboot now? [y/N] " answer
+    if [[ "$answer" == [Yy] ]]; then
+        reboot
+    fi
+fi

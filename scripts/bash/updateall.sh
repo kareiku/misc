@@ -11,9 +11,11 @@ snap refresh &
 
 wait
 
-if [[ -f /var/run/reboot-required ]]; then
+if [[ -f /var/run/reboot-required ]]
+then
     read -r -p "A reboot is required. Do you want to reboot now? [y/N] " answer
-    if [[ "$answer" == [Yy] ]]; then
+    if [[ "$answer" == [Yy] ]]
+    then
         reboot
     fi
 fi

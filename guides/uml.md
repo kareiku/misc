@@ -39,3 +39,11 @@ Covering concepts of UML and PlantUML in a simple way.
     - In PlantUML: `A <|.. B`
     - Definition: A can act as an interface for B, thus B must redefine everything A has.
     - In code: B implements A.
+
+## Great Skinparams and Other Configurations for PlantUML
+
+- `skin rose`: A rosy theme that makes diagrams more beautiful than the default theme.
+
+- `hide circle`: Make PlantUML class diagrams look like Graphical UML ones!
+
+- `skinparam RoundCorner <amount>`: Make elements (that support it, like classes) have rounded corners.

@@ -47,3 +47,5 @@ Covering concepts of UML and PlantUML in a simple way.
 - `hide circle`: Make PlantUML class diagrams look like Graphical UML ones!
 
 - `skinparam RoundCorner <amount>`: Make elements (that support it, like classes) have rounded corners.
+
+- `skinparam GroupInheritance <amount>`: Group inheritance arrows for multiple elements deriving from the same base.

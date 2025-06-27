@@ -8,3 +8,4 @@
 - [Pairing Functions](guides/pairing-functions.md)
 - [UML](guides/uml.md)
 - [Uncategorized Guides and Notes](guides/uncategorized.md)
+- [Unix Permissions Summary](guides/unix-permissions-summary.md)

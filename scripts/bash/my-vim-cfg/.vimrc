@@ -1,0 +1,9 @@
+set hlsearch
+set listchars=tab:>-,trail:~,eol:$,space:·
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set colorcolumn=81
+set wrap
+set linebreak
+set smartindent

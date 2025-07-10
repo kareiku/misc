@@ -7,3 +7,4 @@ set colorcolumn=81
 set wrap
 set linebreak
 set smartindent
+set nowrap

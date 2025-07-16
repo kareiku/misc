@@ -1,8 +1,3 @@
----
-title: Git
-url: /_guides/git.md
----
-
 # Git
 
 ## Pulling and Fetching Changes

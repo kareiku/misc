@@ -1,6 +1,6 @@
 ---
 title: Git
-layout: default
+url: /_guides/git.md
 ---
 
 # Git

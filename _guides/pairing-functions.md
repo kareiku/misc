@@ -1,3 +1,8 @@
+---
+title: Pairing Functions
+layout: default
+---
+
 # Pairing Functions
 
 A pairing function is a function that encodes two natural numbers into one natural number.

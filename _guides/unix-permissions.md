@@ -1,3 +1,8 @@
+---
+title: Unix Permissions Summary
+layout: default
+---
+
 # Unix Permissions Summary
 
 | Permissions  | Octal |  Context                         |

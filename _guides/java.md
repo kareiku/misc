@@ -1,4 +1,9 @@
-# Interesting And Useful Things Done In Java
+---
+title: Interesting and Useful Stuff to do in Java
+layout: default
+---
+
+# Interesting and Useful Stuff to do in Java
 
 ## Reading Files With Key-value Pairs, Using _ResourceBundle_
 

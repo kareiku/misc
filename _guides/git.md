@@ -1,9 +1,9 @@
 ---
-title: Git
+title: Git Quick Summary/Guide
 layout: default
 ---
 
-# Git
+# Git Quick Summary/Guide
 
 ## Pulling and Fetching Changes
 

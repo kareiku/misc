@@ -1,3 +1,8 @@
+---
+title: Conventional Commits Summary
+layout: default
+---
+
 # Conventional Commits Summary
 
 ## Structure

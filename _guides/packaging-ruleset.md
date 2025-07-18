@@ -1,3 +1,8 @@
+---
+title: Packaging Rule Set
+layout: default
+---
+
 # Packaging Rule Set
 
 ## Parameters

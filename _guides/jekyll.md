@@ -17,7 +17,7 @@ statements and themes, we can make a simple but good-looking website with ease.
 <ul>
     {% for file in site.myCollection %}
         <li>
-            <a href="{{ site.basedir }}{{ file.url }}">{{ file.title }}</a>
+            <a href="{{ site.baseurl }}{{ file.url }}">{{ file.title }}</a>
         </li>
     {% endfor %}
 </ul>

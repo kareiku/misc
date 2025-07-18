@@ -36,4 +36,4 @@ can do so by looking in these directories:
 3. Select your preset JSON file and import.
 4. Load whenever you like.
 
-(Given this is a *flatpak* package, we assume the system to be Linux)
+(Given this is a *flatpak* package, we assume the system to be Linux.)

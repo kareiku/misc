@@ -45,7 +45,7 @@ Covering concepts of UML and PlantUML in a simple way.
     - Definition: A can act as an interface for B, thus B must redefine everything A has.
     - In code: B implements A.
 
-## Great Skinparams and Other Configurations for PlantUML
+## Great Skinparams and Other Configurations
 
 - `skin rose`: A rosy theme that makes diagrams more beautiful than the default theme.
 

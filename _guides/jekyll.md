@@ -12,7 +12,8 @@ statements and themes, we can make a simple but good-looking website with ease.
 
 ## Generation of a List from a Directory Local to the Configuration File
 
-```md
+{% raw %}
+```liquid
 <ul>
     {% for file in site.dir %}
         <li>
@@ -21,6 +22,7 @@ statements and themes, we can make a simple but good-looking website with ease.
     {% endfor %}
 </ul>
 ```
+{% endraw %}
 
 You can tweak the code however you like. This is just the way that worked best
 for me.

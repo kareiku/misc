@@ -15,7 +15,7 @@ statements and themes, we can make a simple but good-looking website with ease.
 {% raw %}
 ```liquid
 <ul>
-    {% for file in site.dir %}
+    {% for file in site.myCollection %}
         <li>
             <a href="{{ site.basedir }}{{ file.url }}">{{ file.title }}</a>
         </li>

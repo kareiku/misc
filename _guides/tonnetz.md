@@ -1,5 +1,5 @@
 ---
-title: The *Tonnetz*
+title: The Tonnetz
 layout: default
 ---
 

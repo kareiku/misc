@@ -10,7 +10,7 @@ natural number.
 
 ## Formal Definition
 
-f: &#x2115; x &#x2115; &#rarr; &#x2115;
+f : &#x2115; &times; &#x2115; &rarr; &#x2115;
 
 ## Properties
 

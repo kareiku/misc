@@ -25,14 +25,21 @@ while getopts ":n" opt; do
     esac
 done
 
+shift "((OPTIND -1))"
+
 perlexpr='use Unicode::Normalize;
           $_ = NFKD($_);
           s/[^A-Za-z0-9.]+/-/g;
           s/^-+|-+$//g;
           $_ = lc($_);'
 
+files=()
+for file in "$@"; do
+    files+=( "$(realpath "$file")" )
+done
+
 if $dry_run; then
-    rename -n "$perlexpr" "$@"
+    rename -n "$perlexpr" "${files[@]}"
 else
-    rename "$perlexpr" "$@"
+    rename "$perlexpr" "${files[@]}"
 fi

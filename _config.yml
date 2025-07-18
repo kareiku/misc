@@ -1,6 +1,8 @@
+baseurl: "/misc"
+output: true
 theme: "jekyll-theme-hacker"
 
 collections:
     guides:
         output: true
-        permalink: /guides/:path/
+        permalink: "/guides/:path/"

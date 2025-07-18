@@ -1,3 +1,7 @@
+---
+title: Git
+---
+
 # Git
 
 ## Pulling and Fetching Changes

@@ -3,9 +3,10 @@
  * @param {{ text: string, value: string }[]} options
  */
 export default function (selector, options) {
-    const first = options.shift();
-    selector.appendChild(new Option(first.text, first.value, true, true));
+    let first = true;
     options.forEach((option) =>
-        selector.appendChild(new Option(option.text, option.value))
+        const opt = new Option(option.text, option.value, first, first);
+        selector.appendChild(opt)
+        if (first) first = false;
     );
 }

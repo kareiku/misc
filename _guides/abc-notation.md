@@ -12,8 +12,8 @@ The ABC notation is a plain text musical notation for use in computers.
 - `X:` &#x2014; (uint) The reference number in a tunebook.
 - `T:` &#x2014; (string) The sheet title.
 - `C:` &#x2014; (string) The composer.
-- `M:` &#x2014; (uint/uint) The meter. Appart from standard meters, e.g. `M:3/4`,
-  complex meters like `M:(2+3+2)/8` are perfectly valid.
+- `M:` &#x2014; (uint/uint) The meter. Appart from standard meters, e.g.
+  `M:3/4`, complex meters like `M:(2+3+2)/8` are perfectly valid.
 - `L:` &#x2014; (uint | uint/uint) The unit note length. 1/4 &#x2261; crotchet.
 - `Q:` &#x2014; (\[ string \] uint/uint=uint) The tempo.
 - `Z:` &#x2014; (string) The name of the transcriptor.
@@ -46,7 +46,7 @@ notation is used.
 
 ### Note Lengths
 
-When writing a note, the default length will be the one set by the `L:`.
+When writing a note, the default length will be the one set in the `L:`.
 
 For other lengths, add a division or multiplication after the note. e.g. `A/2`
 is half the `L:` duration, `A/4` a fourth, and `A3/2` is half but dotted, `A2`
@@ -57,9 +57,23 @@ is double the length.
 Rests can be indicated by using `zn`, where n: uint. e.g. `z2` is a rest of
 double the `L:` length. Lengths are applied the same way as in notes.
 
-### Clefs
+### Bars
 
+From the standard:
 
+| Symbol | Meaning                              |
+|--------|--------------------------------------|
+| `|`    | bar line                             |
+| `|]`   | thin-thick double bar line           |
+| `||`   | thin-thin double bar line            |
+| `[|`   | thick-thin double bar line           |
+| `|:`   | start of repeated section            |
+| `:|`   | end of repeated section              |
+| `::`   | start & end of two repeated sections |
+
+### Ties and Slurs
+
+By placing multiple notes between parentheses, these will appear tied.
 
 ## Sheet Example
 

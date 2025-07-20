@@ -8,3 +8,4 @@ set wrap
 set linebreak
 set smartindent
 set nowrap
+set nu

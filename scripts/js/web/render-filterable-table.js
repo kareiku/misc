@@ -53,7 +53,7 @@ export default function (data) {
     function filterTable() {
         tbody.innerHTML = '';
         let filteredData = data.filter((array) =>
-            (array[Number(select.value)] || '')
+            String(array[Number(select.value)] || '')
                 .toLowerCase()
                 .includes(filter.value.toLowerCase())
         );

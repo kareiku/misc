@@ -1,5 +1,5 @@
-import addOptions from '/js/functions/addSelectOptions.js';
-import isUrl from '/js/functions/isUrl.js';
+import addOptions from '/js/functions/add-select-options.js';
+import isUrl from '/js/functions/is-url.js';
 
 /**
  * @param {string[][]} data

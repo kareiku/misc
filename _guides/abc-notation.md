@@ -22,7 +22,7 @@ The ABC notation is a plain text musical notation for use in computers.
 - `V:` &#x2014; (uint 'clef='string) The voice. First element is the identifier,
   next is the clef. e.g. `V:1 clef=bass`.
 
-Out of these, it's recommended to have, at least, X, T, M and K.
+Out of these, it's recommended to have, at least, X, T, M, L and K.
 
 These are not the only existing fields. Check the standard for more info.
 
@@ -81,7 +81,11 @@ By placing multiple notes between parentheses, these will appear tied.
 X:1
 T:Happy birthday to you
 M:3/4
-K:C
+L:1/4
+Q:1/4=120
+K:G
+D3/4D/4 | E D G | F2 D3/4D/4 | E D A | G2 D3/4D/4 |
+d B G | (F HE) c3/4c/4 | B G A | G2 |]
 ```
 
 ## Sources & Useful Resources
@@ -89,3 +93,5 @@ K:C
 - [Wikipedia article on ABC notation](https://en.wikipedia.org/wiki/ABC_notation)
 - ["ABC 1.6 in BNF format", by Henrik Norbeck. Article stored in the Wayback Machine](https://web.archive.org/web/20080309023424/http://www.norbeck.nu/abc/abcbnf.htm)
 - [abc\:standard\:v2.1](https://abcnotation.com/wiki/abc:standard:v2.1)
+- [Wikipedia article listing musical symbols](https://en.wikipedia.org/wiki/List_of_musical_symbols)
+- [abcjs quick editor](https://editor.drawthedots.com/)

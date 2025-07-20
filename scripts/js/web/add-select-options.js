@@ -4,9 +4,9 @@
  */
 export default function (selector, options) {
     let first = true;
-    options.forEach((option) =>
+    options.forEach((option) => {
         const opt = new Option(option.text, option.value, first, first);
-        selector.appendChild(opt)
+        selector.appendChild(opt);
         if (first) first = false;
-    );
+    });
 }

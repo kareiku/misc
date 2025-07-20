@@ -1,7 +1,13 @@
+/**
+ * @param {string} word
+ * @param {number} distance
+ * @param {...string} words
+ * @returns {string}
+ */
 export default function (word, distance, ...words) {
     if (!words.length) return word;
     words = words.filter(
-        (w) => Math.abs(levenshteinDistance(word, w) - distance) <= distance,
+        (w) => Math.abs(levenshteinDistance(word, w) - distance) <= distance
     );
     words.push(word);
     words = [...new Set(words)];
@@ -25,7 +31,7 @@ function levenshteinDistance(a, b) {
             dp[j][i] = Math.min(
                 dp[j - 1][i] + 1,
                 dp[j][i - 1] + 1,
-                dp[j - 1][i - 1] + cost,
+                dp[j - 1][i - 1] + cost
             );
         }
     }

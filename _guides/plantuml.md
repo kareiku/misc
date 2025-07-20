@@ -5,8 +5,6 @@ layout: default
 
 # PlantUML Summary
 
-Covering concepts of UML and PlantUML in a simple way.
-
 ## Class Diagrams
 
 ### Arrows

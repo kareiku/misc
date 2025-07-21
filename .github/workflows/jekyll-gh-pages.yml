@@ -6,6 +6,7 @@ on:
     paths:
       - '_config.yml'
       - 'index.md'
+      - '404.html'
       - '_guides/**'
 
   workflow_dispatch:

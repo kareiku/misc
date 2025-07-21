@@ -14,7 +14,7 @@ The ABC notation is a plain text musical notation for use in computers.
 - `C:` &#x2014; (string) The composer.
 - `M:` &#x2014; (uint/uint) The meter. Appart from standard meters, e.g.
   `M:3/4`, complex meters like `M:(2+3+2)/8` are perfectly valid.
-- `L:` &#x2014; (uint | uint/uint) The unit note length. 1/4 &#x2261; crotchet.
+- `L:` &#x2014; (uint \| uint/uint) The unit note length. 1/4 &#x2261; crotchet.
 - `Q:` &#x2014; (\[ string \] uint/uint=uint) The tempo.
 - `Z:` &#x2014; (string) The name of the transcriptor.
 - `K:` &#x2014; ({ A | B | ... \[ # | b \] \[ major | minor | lydian | ... \] })

@@ -83,7 +83,7 @@ T:Happy birthday to you
 M:3/4
 L:1/4
 Q:1/4=120
-K:G
+K:G clef=treble
 D3/4D/4 | E D G | F2 D3/4D/4 | E D A | G2 D3/4D/4 |
 d B G | (F HE) c3/4c/4 | B G A | G2 |]
 ```

@@ -9,7 +9,7 @@ import isUrl from '/js/functions/is-url.js';
  *   table: HTMLTableElement
  * }}
  */
-export default function (data) {
+export default function renderFilterableTable(data) {
     const select = document.createElement('select');
     const filter = document.createElement('input');
     const table = document.createElement('table');

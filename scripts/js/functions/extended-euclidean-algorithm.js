@@ -8,7 +8,7 @@
  *   y: number[]
  * }}
  */
-export default function (a, b) {
+export default function EEA(a, b) {
     const x = (x2, x1, q1) => x2 - x1 * q1;
     const q = (r2, r1) => (r1 === 0 ? null : Math.floor(r2 / r1));
 

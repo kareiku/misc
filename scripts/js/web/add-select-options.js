@@ -2,7 +2,7 @@
  * @param {HTMLSelectElement} selector
  * @param {{ text: string, value: string }[]} options
  */
-export default function (selector, options) {
+export default function addOptions(selector, options) {
     let first = true;
     options.forEach((option) => {
         const opt = new Option(option.text, option.value, first, first);

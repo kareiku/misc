@@ -4,7 +4,7 @@
  * @param {...string} words
  * @returns {string}
  */
-export default function (word, distance, ...words) {
+export default function dyslexify(word, distance, ...words) {
     if (!words.length) return word;
     words = words.filter(
         (w) => Math.abs(levenshteinDistance(word, w) - distance) <= distance

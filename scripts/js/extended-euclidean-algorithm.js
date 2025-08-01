@@ -1,14 +1,11 @@
 /**
- * @param {number} a
- * @param {number} b
- * @returns {{
- *   r: number[],
- *   q: number[],
- *   x: number[],
- *   y: number[]
- * }}
+ * a: number - The first number.
+ * b: number - The second number.
+ *
+ * returns: Object - The object representation for the EEA of a and b, prepared
+ *                   to be printed with console.table where supported.
  */
-export default function EEA(a, b) {
+export default function (a, b) {
     const x = (x2, x1, q1) => x2 - x1 * q1;
     const q = (r2, r1) => (r1 === 0 ? null : Math.floor(r2 / r1));
 

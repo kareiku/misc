@@ -5,10 +5,74 @@ layout: default
 
 # Git Quick Summary/Guide
 
+## Basics
+
+### Downloading (Cloning)
+
+To download a repository into your machine, or properly said, _clone_ it, you
+can use
+
+```bash
+git clone <url>
+```
+
+where the URL is either an HTTP or an SSH link.
+
+### Adding Changes
+
+To update the state of a repository, first you have to add the changes of
+certain files with
+
+```bash
+git add <file> [files...]
+```
+
+or add all with
+
+```bash
+git add --all
+```
+
+### Committing Changes
+
+To commit the changes (log them in the tracker), you can either use `git commit`
+and your default text editor to add a commit message, or
+
+```bash
+git commit -m <message-string>
+```
+
+### Pushing Changes to Remote
+
+Once committed, changes can be pushed to remote (uploaded to the server holding
+the repository, if existent) with
+
+```bash
+git push
+```
+
+### Showing the Log
+
+Use `git log` to see your previous commits and their SHAs in chronological
+order. Append the options `--oneline` to show a summary instead and `--graph` to
+show the changes from every branch.
+
+### Rolling Back
+
+Because git organizes a repository's commits in trees, if something breaks, you
+can always roll back to a previously committed version with
+
+```bash
+git reset --hard <commit-sha>
+```
+
+Please note that this is the forced way of rolling back, thus the use of the
+`--hard` option. More advanced ways of restoring exist, too.
+
 ## Pulling and Fetching Changes
 
-The sole difference between _pulling_ and _fetching_ is that the later doesn't involve applying changes automatically,
-while the first does.
+The sole difference between _pulling_ and _fetching_ is that the later doesn't
+involve applying changes automatically, while the first does.
 
 The commands are rather straight forward:
 
@@ -75,8 +139,8 @@ Note: The default `<remote-name>` is usually `origin`.
 
 ## Cherry-picking
 
-The following sequence of commands allow for cherry-picking (copying) some commits from a branch into another (not
-removing them from the source branch).
+The following sequence of commands allow for cherry-picking (copying) some
+commits from a branch into another (not removing them from the source branch).
 
 1. `git checkout <branch-dest>`
 2. `git log <branch-src>`
@@ -86,8 +150,8 @@ removing them from the source branch).
 
 ## Rebasing
 
-Rebasing is the _art_ of organizing your past commits by changing their messages, deleting them, or merging them with
-others.
+Rebasing is the _art_ of organizing your past commits by changing their
+messages, deleting them, or merging them with others.
 
 The following statements can be used to rebase commits:
 
@@ -100,14 +164,16 @@ The following statements can be used to rebase commits:
     - `p` or `pick` means "use commit, as-is";
     - `r` or `reword` means "use commit, but edit the commit message";
     - `s` or `squash` means "use commit, but meld it into the previous one";
-    - `f` or `fixup` means the same as `squash`, but discarding this commit's message;
+    - `f` or `fixup` means the same as `squash`, but discarding this commit's
+      message;
     - `d` or `drop` means "remove this commit".
 3. `git push --force`
 
 ## Merging
 
-Merging is a process where two independent commits (in the same working tree but different branches) are melded into
-another commit. When finished, the branch from where the commit was started will point to the _merged_ commit.
+Merging is a process where two independent commits (in the same working tree but
+different branches) are melded into another commit. When finished, the branch
+from where the commit was started will point to the _merged_ commit.
 
 Main commands used when merging are the following:
 
@@ -120,14 +186,15 @@ git merge -X ours <branch-2> # Resolve conflicts with our branch's changes
 git merge -X theirs <branch-2> # Resolve conflicts with their branch's changes
 ```
 
-See the [official documentation](https://git-scm.com/docs/git-merge) for more information,
-and [this official guide](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) for better
-understanding of what branch merging is.
+See the [official documentation](https://git-scm.com/docs/git-merge) for more
+information, and
+[this official guide](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+for better understanding of what branch merging is.
 
 ### "Merging" Files from a Branch Into Another
 
-If, for some reason, branches are disjoint and merging can't be done correctly, copying everything from a branch into
-another can be done with:
+If, for some reason, branches are disjoint and merging can't be done correctly,
+copying everything from a branch into another can be done with:
 
 ```bash
 git checkout <branch-1>
@@ -136,8 +203,9 @@ git checkout <branch-2> -- .
 
 ## File Excluding (Using .gitignore)
 
-Statements are read, line by line, from first to last. However, precedence is given by the last affecting statement. For
-instance, for a `.gitignore` with the following statements:
+Statements are read, line by line, from first to last. However, precedence is
+given by the last affecting statement. For instance, for a `.gitignore` with the
+following statements:
 
 ```
 a
@@ -145,24 +213,27 @@ b
 a'
 ```
 
-where a and a' represent statements that affect the same files and b an statement that affects other files,
-`a'` will have precedence over `a`, but not over `b`. The same way, `b` won't change `a`, and won't affect `a'` because
-of it being previously loaded, independently of the files it changes.
+where a and a' represent statements that affect the same files and b an
+statement that affects other files, `a'` will have precedence over `a`, but not
+over `b`. The same way, `b` won't change `a`, and won't affect `a'` because of
+it being previously loaded, independently of the files it changes.
 
-Note: File ignoring rules won't affect those files already being tracked by git. To remove those, use `git rm` and
-committing.
+Note: File ignoring rules won't affect those files already being tracked by git.
+To remove those, use `git rm` and committing.
 
-For patterns and more, please refer
-to [this cheatsheet](https://gist.github.com/jstnlvns/ebaa046fae16543cc9efc7f24bcd0e31).
+For patterns and more, please refer to
+[this cheatsheet](https://gist.github.com/jstnlvns/ebaa046fae16543cc9efc7f24bcd0e31).
 
 ## Attributes (Using .gitattributes)
 
-Attributes can help with following standards in a project. They're mainly used to enforce one kind of line ending when
-uploading to the repository, which is what will be explained in here.
+Attributes can help with following standards in a project. They're mainly used
+to enforce one kind of line ending when uploading to the repository, which is
+what will be explained in here.
 
 ### Enforcing LF/CRLF
 
-The best way to ensure a certain line ending on files by extension is by using the following format:
+The best way to ensure a certain line ending on files by extension is by using
+the following format:
 
 ```
 *.ext1  text eol=lf
@@ -173,16 +244,19 @@ file1   text eol=lf
 file2   binary
 ```
 
-**Enforcing a format to all files in your project can break them.** Be careful with binaries.
+**Enforcing a format to all files in your project can break them.** Be careful
+with binaries.
 
-However, a simpler way, with low error rate, for ensuring correct file endings in shared repositories is:
+However, a simpler way, with low error rate, for ensuring correct file endings
+in shared repositories is:
 
 ```
 * text=auto
 ```
 
-This will enforce LF on all of those files known to Git to be text-based (binary detection is really good in current
-Git) on commit, and system default line endings (LF on Unix-based systems, CRLF on Windows) on checkout.
+This will enforce LF on all of those files known to Git to be text-based (binary
+detection is really good in current Git) on commit, and system default line
+endings (LF on Unix-based systems, CRLF on Windows) on checkout.
 
 ## Sources
 

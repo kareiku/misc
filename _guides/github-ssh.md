@@ -3,7 +3,7 @@ title: How to Connect GitHub to Git SSH
 layout: default
 ---
 
-# How to Connecting GitHub to Git SSH
+# How to Connect GitHub to Git SSH
 
 ## Steps for Generating an SSH Key
 
